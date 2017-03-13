@@ -19,9 +19,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="codigo" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="festreno" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="genero" type="{http://com.ipartek.formacion/types}genero" minOccurs="0"/>
- *         &lt;element name="titulo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="genero" type="{PeliculaWs}genero" minOccurs="0"/>
+ *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fEstreno" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,17 +33,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "pelicula", propOrder = {
     "codigo",
-    "festreno",
     "genero",
-    "titulo"
+    "nombre",
+    "fEstreno"
 })
 public class Pelicula {
 
     protected int codigo;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar festreno;
     protected Genero genero;
-    protected String titulo;
+    protected String nombre;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar fEstreno;
 
     /**
      * Gets the value of the codigo property.
@@ -59,30 +59,6 @@ public class Pelicula {
      */
     public void setCodigo(int value) {
         this.codigo = value;
-    }
-
-    /**
-     * Gets the value of the festreno property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFestreno() {
-        return festreno;
-    }
-
-    /**
-     * Sets the value of the festreno property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFestreno(XMLGregorianCalendar value) {
-        this.festreno = value;
     }
 
     /**
@@ -110,27 +86,51 @@ public class Pelicula {
     }
 
     /**
-     * Gets the value of the titulo property.
+     * Gets the value of the nombre property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTitulo() {
-        return titulo;
+    public String getNombre() {
+        return nombre;
     }
 
     /**
-     * Sets the value of the titulo property.
+     * Sets the value of the nombre property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTitulo(String value) {
-        this.titulo = value;
+    public void setNombre(String value) {
+        this.nombre = value;
+    }
+
+    /**
+     * Gets the value of the fEstreno property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getFEstreno() {
+        return fEstreno;
+    }
+
+    /**
+     * Sets the value of the fEstreno property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setFEstreno(XMLGregorianCalendar value) {
+        this.fEstreno = value;
     }
 
 }

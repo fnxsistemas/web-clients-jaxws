@@ -13,7 +13,7 @@ import javax.xml.ws.handler.MessageContext;
 
 import com.ipartek.peliculas.Pelicula;
 import com.ipartek.peliculas.PeliculaMensaje;
-import com.ipartek.peliculas.PeliculasServiceWSImp;
+import com.ipartek.peliculas.PeliculaServiceWsImp;
 import com.ipartek.peliculas.Peliculasservice;
 
 /**
@@ -25,7 +25,7 @@ public class Main {
 		/* Se instancia el cliente del servicio de peliculas. */
 		Peliculasservice cliente = new Peliculasservice(); 
 		/* Se instancia el servicio Ws.*/
-		PeliculasServiceWSImp clienteSoap = cliente.getPeliculasServiceWSImpPort();
+		PeliculaServiceWsImp clienteSoap = cliente.getPeliculaServiceWsImpPort();
 		/* Se recoge el mapa que contiene el mapa del contexto de la respuesta.
 		 * BindingProvider es quien une cliente y servidor.*/
 		Map<String,Object> requestContext = ((BindingProvider) clienteSoap).getRequestContext();
@@ -37,21 +37,26 @@ public class Main {
 		requestContext.put(MessageContext.HTTP_REQUEST_HEADERS, requestHeader);
 		/* Se recoge la clase de la pelicula. */
 		PeliculaMensaje respuesta = clienteSoap.obtenerporid(1);
-		/* Se recoge la pelicula.*/
-		Pelicula pelicula = respuesta.getPelicula();
+		/* Se crea un Array la recoger la lista de peliculas del SOAP.*/
+		List<Pelicula> peliculas = respuesta.getPeliculas();
+		/* Se recoge la pelicula en la posicion inicial.*/
+		Pelicula pelicula = peliculas.get(0);
 		/* Se comprueba si se ha recogido la pelicula. */
 		if(pelicula == null){
 			/* Se muestra por consola el mensaje del SOAP. */
 			System.out.println(respuesta.getMensaje());			
 		}else{
-			System.out.println(pelicula.getTitulo());			
+			System.out.println("La pelicula es " + pelicula.getNombre());			
 		}
 		
 		/* Se recoge la clase de la pelicula. */
-		respuesta = clienteSoap.obtenertodo();
+		respuesta = clienteSoap.obtenerportodo();
+		
+		/*Cabecera de listado.*/
+		System.out.println("Listado de peliculas");
 		
 		for (Pelicula peliculaEnLista : respuesta.getPeliculas()) {
-			System.out.println(peliculaEnLista.getTitulo());		
+			System.out.println(peliculaEnLista.getNombre());		
 			
 		}
 		

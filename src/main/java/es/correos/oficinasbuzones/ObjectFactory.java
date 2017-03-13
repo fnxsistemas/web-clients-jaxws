@@ -30,83 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Municipios }
-     * 
-     */
-    public Municipios createMunicipios() {
-        return new Municipios();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfInt }
-     * 
-     */
-    public ArrayOfInt createArrayOfInt() {
-        return new ArrayOfInt();
-    }
-
-    /**
-     * Create an instance of {@link Calle }
-     * 
-     */
-    public Calle createCalle() {
-        return new Calle();
-    }
-
-    /**
-     * Create an instance of {@link NucleosPorMunicipio }
-     * 
-     */
-    public NucleosPorMunicipio createNucleosPorMunicipio() {
-        return new NucleosPorMunicipio();
-    }
-
-    /**
-     * Create an instance of {@link CallesPorNucleoResponse }
-     * 
-     */
-    public CallesPorNucleoResponse createCallesPorNucleoResponse() {
-        return new CallesPorNucleoResponse();
-    }
-
-    /**
-     * Create an instance of {@link Municipio }
-     * 
-     */
-    public Municipio createMunicipio() {
-        return new Municipio();
-    }
-
-    /**
-     * Create an instance of {@link PortalesPorCalle }
-     * 
-     */
-    public PortalesPorCalle createPortalesPorCalle() {
-        return new PortalesPorCalle();
-    }
-
-    /**
      * Create an instance of {@link NucleosPorMunicipioResponse }
      * 
      */
     public NucleosPorMunicipioResponse createNucleosPorMunicipioResponse() {
         return new NucleosPorMunicipioResponse();
-    }
-
-    /**
-     * Create an instance of {@link EnvoltorioMunicipio }
-     * 
-     */
-    public EnvoltorioMunicipio createEnvoltorioMunicipio() {
-        return new EnvoltorioMunicipio();
-    }
-
-    /**
-     * Create an instance of {@link Nucleo }
-     * 
-     */
-    public Nucleo createNucleo() {
-        return new Nucleo();
     }
 
     /**
@@ -118,6 +46,54 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PortalesPorCalleResponse }
+     * 
+     */
+    public PortalesPorCalleResponse createPortalesPorCalleResponse() {
+        return new PortalesPorCalleResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfCalle }
+     * 
+     */
+    public ArrayOfCalle createArrayOfCalle() {
+        return new ArrayOfCalle();
+    }
+
+    /**
+     * Create an instance of {@link NucleosPorMunicipio }
+     * 
+     */
+    public NucleosPorMunicipio createNucleosPorMunicipio() {
+        return new NucleosPorMunicipio();
+    }
+
+    /**
+     * Create an instance of {@link Municipio }
+     * 
+     */
+    public Municipio createMunicipio() {
+        return new Municipio();
+    }
+
+    /**
+     * Create an instance of {@link Calle }
+     * 
+     */
+    public Calle createCalle() {
+        return new Calle();
+    }
+
+    /**
+     * Create an instance of {@link CallesPorNucleoResponse }
+     * 
+     */
+    public CallesPorNucleoResponse createCallesPorNucleoResponse() {
+        return new CallesPorNucleoResponse();
+    }
+
+    /**
      * Create an instance of {@link ArrayOfNucleo }
      * 
      */
@@ -126,11 +102,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PortalesPorCalleResponse }
+     * Create an instance of {@link Nucleo }
      * 
      */
-    public PortalesPorCalleResponse createPortalesPorCalleResponse() {
-        return new PortalesPorCalleResponse();
+    public Nucleo createNucleo() {
+        return new Nucleo();
+    }
+
+    /**
+     * Create an instance of {@link EnvoltorioMunicipioResponse }
+     * 
+     */
+    public EnvoltorioMunicipioResponse createEnvoltorioMunicipioResponse() {
+        return new EnvoltorioMunicipioResponse();
+    }
+
+    /**
+     * Create an instance of {@link PortalesPorCalle }
+     * 
+     */
+    public PortalesPorCalle createPortalesPorCalle() {
+        return new PortalesPorCalle();
+    }
+
+    /**
+     * Create an instance of {@link MunicipiosResponse }
+     * 
+     */
+    public MunicipiosResponse createMunicipiosResponse() {
+        return new MunicipiosResponse();
+    }
+
+    /**
+     * Create an instance of {@link EnvoltorioMunicipio }
+     * 
+     */
+    public EnvoltorioMunicipio createEnvoltorioMunicipio() {
+        return new EnvoltorioMunicipio();
     }
 
     /**
@@ -150,35 +158,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfCalle }
-     * 
-     */
-    public ArrayOfCalle createArrayOfCalle() {
-        return new ArrayOfCalle();
-    }
-
-    /**
-     * Create an instance of {@link MunicipiosResponse }
-     * 
-     */
-    public MunicipiosResponse createMunicipiosResponse() {
-        return new MunicipiosResponse();
-    }
-
-    /**
-     * Create an instance of {@link EnvoltorioMunicipioResponse }
-     * 
-     */
-    public EnvoltorioMunicipioResponse createEnvoltorioMunicipioResponse() {
-        return new EnvoltorioMunicipioResponse();
-    }
-
-    /**
      * Create an instance of {@link CallesPorNucleo }
      * 
      */
     public CallesPorNucleo createCallesPorNucleo() {
         return new CallesPorNucleo();
+    }
+
+    /**
+     * Create an instance of {@link Municipios }
+     * 
+     */
+    public Municipios createMunicipios() {
+        return new Municipios();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfInt }
+     * 
+     */
+    public ArrayOfInt createArrayOfInt() {
+        return new ArrayOfInt();
     }
 
 }

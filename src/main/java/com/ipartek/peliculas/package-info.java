@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://com.ipartek.formacion/types")
+@javax.xml.bind.annotation.XmlSchema(namespace = "PeliculaWs")
 package com.ipartek.peliculas;

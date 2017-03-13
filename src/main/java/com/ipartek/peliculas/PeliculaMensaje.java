@@ -20,8 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="mensaje" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="pelicula" type="{http://com.ipartek.formacion/types}pelicula" minOccurs="0"/>
- *         &lt;element name="peliculas" type="{http://com.ipartek.formacion/types}pelicula" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="peliculas" type="{PeliculaWs}pelicula" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,13 +32,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "peliculaMensaje", propOrder = {
     "mensaje",
-    "pelicula",
     "peliculas"
 })
 public class PeliculaMensaje {
 
     protected String mensaje;
-    protected Pelicula pelicula;
     @XmlElement(nillable = true)
     protected List<Pelicula> peliculas;
 
@@ -65,30 +62,6 @@ public class PeliculaMensaje {
      */
     public void setMensaje(String value) {
         this.mensaje = value;
-    }
-
-    /**
-     * Gets the value of the pelicula property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Pelicula }
-     *     
-     */
-    public Pelicula getPelicula() {
-        return pelicula;
-    }
-
-    /**
-     * Sets the value of the pelicula property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Pelicula }
-     *     
-     */
-    public void setPelicula(Pelicula value) {
-        this.pelicula = value;
     }
 
     /**
